@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package banca;
-
+import java.util.ArrayList;
 /**
  *
  * @author roly
@@ -15,8 +15,19 @@ public class Cliente {
     String sDni;
     int iTelefono;
     int iEdad;
-public void SacarDinero(){
+    ArrayList<Cuenta> acCuentas;
+public void SacarDinero(Cuenta c,int d){
+    
+    if(c.RetirarFondos(d)){
+    
+        System.out.println("Has retirado: "+d+" € de tu cuenta./n"+"Le quedan: "+c.getiSaldo()+" € en su cuenta.");
+        
+    }
+    else{
+        System.out.println("No tienes fondos suficientes./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
+    }
 }
+    
 
 public void IngresarDinero(){}
 
