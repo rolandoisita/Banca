@@ -19,4 +19,10 @@ public class Gestor {
         c.AñadirCuenta(a);
     
     }
-}
+    
+    public void ModificarCuenta(Cuenta c){
+    
+        }
+    
+    }
+
