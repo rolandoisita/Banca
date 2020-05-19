@@ -36,7 +36,13 @@ public class Cliente {
     System.out.println("Se han ingresado "+d+" € a su cuenta.");
 
 }
-
+    
+    public void AñadirCuenta(Cuenta c){
+    
+        this.acCuentas.add(c);
+        
+    };
+    
     public void setsNombre(String sNombre) {
         this.sNombre = sNombre;
     }
