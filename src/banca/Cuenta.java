@@ -33,6 +33,14 @@ public class Cuenta {
             return true;
         }
     }
+    
+    public boolean IngresarFondos(int d){
+    
+        this.iSaldo+=d;
+        return true;
+    
+    }
+    
     public Cuenta(int iSaldo, String sNumero_cuenta, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, int iSaldo_medio, int iPagos_realiazdos, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
@@ -43,7 +51,7 @@ public class Cuenta {
         this.iPagos_realiazdos = iPagos_realiazdos;
         this.Fecha_apertura = Fecha_apertura;
     }
-
+    
     public int getiSaldo() {
         return iSaldo;
     }

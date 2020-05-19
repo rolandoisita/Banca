@@ -17,7 +17,8 @@ public class Cliente {
     int iTelefono;
     int iEdad;
     ArrayList<Cuenta> acCuentas;
-public void SacarDinero(Cuenta c,int d){
+    
+    public void SacarDinero(Cuenta c,int d){
     
     if(c.RetirarFondos(d)){
     
@@ -28,7 +29,13 @@ public void SacarDinero(Cuenta c,int d){
         System.out.println("No se han podido retirar lso fondos por falta de saldo o limite de retirada./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
     }
 }
-public void IngresarDinero(){}
+    
+    public void IngresarDinero(Cuenta c, int d){
+
+    c.IngresarFondos(d);
+    System.out.println("Se han ingresado "+d+" € a su cuenta.");
+
+}
 
     public void setsNombre(String sNombre) {
         this.sNombre = sNombre;
