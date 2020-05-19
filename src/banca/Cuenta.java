@@ -25,7 +25,7 @@ public class Cuenta {
     public boolean RetirarFondos(int d){
     int resta;
     resta=this.iSaldo-d;
-        if(resta<0){
+        if(resta<0 && d>this.iLimite_retirada){
             return false;
         }
         else{

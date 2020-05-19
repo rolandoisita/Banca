@@ -25,7 +25,7 @@ public void SacarDinero(Cuenta c,int d){
         
     }
     else{
-        System.out.println("No tienes fondos suficientes./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
+        System.out.println("No se han podido retirar lso fondos por falta de saldo o limite de retirada./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
     }
 }
 public void IngresarDinero(){}
