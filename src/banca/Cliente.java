@@ -18,9 +18,9 @@ public class Cliente {
     int iEdad;
     ArrayList<Cuenta> acCuentas;
     
-    public void SacarDinero(Cuenta c,int d){
+    public void SacarDinero(Cuenta c,Tarjeta t,int d){
     
-    if(c.RetirarFondos(d)){
+    if(c.RetirarFondos(d,t)){
     
         System.out.println("Has retirado: "+d+" € de tu cuenta./n"+"Le quedan: "+c.getiSaldo()+" € en su cuenta.");
         

@@ -13,8 +13,6 @@ public class Cuenta {
     
     int iSaldo;
     String sNumero_cuenta;
-    int iTarjeta_asociada;
-    
     int []iSaldo_mensual=new int[12];
     ArrayList<Tarjeta> atTarjetas;
     int iPagos_realiazdos;
@@ -49,12 +47,10 @@ public class Cuenta {
     return suma/12;
     }
     
-    public Cuenta(int iSaldo, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, String sNumero_cuenta, String Fecha_apertura) {
+    public Cuenta(int iSaldo,String sNumero_cuenta, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
-        this.iTarjeta_asociada = iTarjeta_asociada;
-        this.iLimite_retirada = iLimite_retirada;
-        this.iLimite_online = iLimite_online;
+        
         this.Fecha_apertura = Fecha_apertura;
         this.iPagos_realiazdos=Math.round((int)(Math.random()*100));
         for(int i=0;i<this.iSaldo_mensual.length;i++){
@@ -72,18 +68,6 @@ public class Cuenta {
         return sNumero_cuenta;
     }
 
-    public int getiTarjeta_asociada() {
-        return iTarjeta_asociada;
-    }
-
-    public int getiLimite_retirada() {
-        return iLimite_retirada;
-    }
-
-    public int getiLimite_online() {
-        return iLimite_online;
-    }
-
     public int getiPagos_realiazdos() {
         return iPagos_realiazdos;
     }
@@ -98,18 +82,6 @@ public class Cuenta {
 
     public void setsNumero_cuenta(String sNumero_cuenta) {
         this.sNumero_cuenta = sNumero_cuenta;
-    }
-
-    public void setiTarjeta_asociada(int iTarjeta_asociada) {
-        this.iTarjeta_asociada = iTarjeta_asociada;
-    }
-
-    public void setiLimite_retirada(int iLimite_retirada) {
-        this.iLimite_retirada = iLimite_retirada;
-    }
-
-    public void setiLimite_online(int iLimite_online) {
-        this.iLimite_online = iLimite_online;
     }
 
     public void setiPagos_realiazdos(int iPagos_realiazdos) {
