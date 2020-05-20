@@ -84,8 +84,6 @@ public class Cuenta {
         return iLimite_online;
     }
 
-   
-
     public int getiPagos_realiazdos() {
         return iPagos_realiazdos;
     }
