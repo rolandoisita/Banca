@@ -49,7 +49,7 @@ public class Cuenta {
     return suma/12;
     }
     
-    public Cuenta(int iSaldo, String sNumero_cuenta, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, String Fecha_apertura) {
+    public Cuenta(int iSaldo, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, String sNumero_cuenta, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
         this.iTarjeta_asociada = iTarjeta_asociada;
