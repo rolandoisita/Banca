@@ -6,7 +6,7 @@
 package banca;
 import java.util.Scanner;
 /**
- *
+ * Clase Gestor para realiazr operaciones sobre las cuentas y perfiles de los clientes
  * @author roly
  */
 public class Gestor {

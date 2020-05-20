@@ -6,7 +6,7 @@
 package banca;
 
 /**
- *
+ * Clase Tarjeta para almacenar los datos de las tarjetas de los clientes
  * @author roly
  */
 public class Tarjeta {
@@ -16,7 +16,7 @@ public class Tarjeta {
     int iPagosRealizados;
 
     /**
-     *
+     * Constructor de la tarjeta
      * @param iLimiteRetidara
      * @param iLimitePagoOnline
      */
