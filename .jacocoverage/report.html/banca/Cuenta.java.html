@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Cuenta.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Banca&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">banca</a> &gt; <span class="el_source">Cuenta.java</span></div><h1>Cuenta.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package banca;
+import java.util.ArrayList;
+/**
+ * Clase cuenta para guardar los datos de las cuentas de los clientes y hacer algunas operaciones   
+ * @author roly
+ */
+public class Cuenta {
+    
+    int iSaldo;
+    String sNumero_cuenta;
+<span class="fc" id="L16">    int []iSaldo_mensual=new int[12];</span>
+    ArrayList&lt;Tarjeta&gt; atTarjetas;
+    String Fecha_apertura;
+    
+    /**
+     * Metodo para retirar fondos de la cuenta
+     * @param d recibe por parametro la cantidad que deseas retirar de la cuenta
+     * @param t recibe una tarjeta asociada  la cuenta con la que se van a retirar los fondos
+     * @return boolean devuelve true si se ha podido retirar los fondos y false y no se ha podido
+     * @see SacarDinero de Cliente
+     */
+    public boolean RetirarFondos(int d, Tarjeta t){
+    int resta;
+<span class="fc" id="L29">    resta=this.iSaldo-d;</span>
+<span class="pc bpc" id="L30" title="3 of 4 branches missed.">        if(resta&lt;0 &amp;&amp; d&gt;t.getiLimiteRetidara()){</span>
+<span class="nc" id="L31">            return false;</span>
+        }
+        else{
+<span class="fc" id="L34">        this.iSaldo-=d;</span>
+<span class="fc" id="L35">            return true;</span>
+        }
+    }
+    
+    /**
+     * Metodo para ingresar dinero en la cuenta
+     * @param d recibe la cantidad que se quiere ingresar
+     * @return boolean devuelve true si se han añadido los fondos
+     * @see IngresarDinero de Cliente
+     */
+    public boolean IngresarFondos(int d){
+    
+<span class="fc" id="L47">        this.iSaldo+=d;</span>
+<span class="fc" id="L48">        return true;</span>
+    
+    }
+    
+    /**
+     * Metodo para saber el saldo medio de la cuenta 
+     * @return int devuelve el saldo medio 
+     */
+    public int SaldoMedio(){
+<span class="nc" id="L57">    int suma=0;</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">        for(int i=0;i&lt;this.iSaldo_mensual.length;i++){</span>
+<span class="nc" id="L59">            suma+=this.iSaldo_mensual[i];</span>
+        }
+<span class="nc" id="L61">    return suma/12;</span>
+    }
+    
+    /**
+     * Metodo para añadir una tarjeta  a la cuenta
+     * @param t recibe la tarjeta por parametro
+     */
+    public void AñadirTarjeta(Tarjeta t){
+    
+<span class="nc" id="L70">        atTarjetas.add(t);</span>
+    
+<span class="nc" id="L72">    }</span>
+            
+    /**
+     * Constructor de la clase Cuenta
+     * @param iSaldo
+     * @param sNumero_cuenta
+     * @param Fecha_apertura
+     */
+<span class="fc" id="L80">    public Cuenta(int iSaldo,String sNumero_cuenta, String Fecha_apertura) {</span>
+<span class="fc" id="L81">        this.iSaldo = iSaldo;</span>
+<span class="fc" id="L82">        this.sNumero_cuenta = sNumero_cuenta;</span>
+        
+<span class="fc" id="L84">        this.Fecha_apertura = Fecha_apertura;</span>
+        
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        for(int i=0;i&lt;this.iSaldo_mensual.length;i++){</span>
+        
+<span class="fc" id="L88">            this.iSaldo_mensual[i]=Math.round((int)(Math.random()*1000));</span>
+            
+        }
+<span class="fc" id="L91">    }</span>
+    
+    /**
+     *
+     * @return
+     */
+    public int getiSaldo() {
+<span class="fc" id="L98">        return iSaldo;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getsNumero_cuenta() {
+<span class="nc" id="L106">        return sNumero_cuenta;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getFecha_apertura() {
+<span class="nc" id="L114">        return Fecha_apertura;</span>
+    }
+
+    /**
+     *
+     * @param iSaldo
+     */
+    public void setiSaldo(int iSaldo) {
+<span class="nc" id="L122">        this.iSaldo = iSaldo;</span>
+<span class="nc" id="L123">    }</span>
+
+    /**
+     *
+     * @param sNumero_cuenta
+     */
+    public void setsNumero_cuenta(String sNumero_cuenta) {
+<span class="nc" id="L130">        this.sNumero_cuenta = sNumero_cuenta;</span>
+<span class="nc" id="L131">    }</span>
+
+    /**
+     *
+     * @param Fecha_apertura
+     */
+    public void setFecha_apertura(String Fecha_apertura) {
+<span class="nc" id="L138">        this.Fecha_apertura = Fecha_apertura;</span>
+<span class="nc" id="L139">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

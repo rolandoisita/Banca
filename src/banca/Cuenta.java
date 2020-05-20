@@ -65,10 +65,10 @@ public class Cuenta {
      * Metodo para añadir una tarjeta  a la cuenta
      * @param t recibe la tarjeta por parametro
      */
-    public void AñadirTarjeta(Tarjeta t){
+    public boolean AñadirTarjeta(Tarjeta t){
     
         atTarjetas.add(t);
-    
+        return true;
     }
             
     /**

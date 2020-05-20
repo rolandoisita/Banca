@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Cliente.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Banca&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">banca</a> &gt; <span class="el_source">Cliente.java</span></div><h1>Cliente.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package banca;
+import java.util.ArrayList;
+/**
+ * Una clase CLiente para guardar los datos de los clientes ademas de poder realizar algunas operacioens
+ * @author roly
+ */
+public class Cliente {
+    String sNombre;
+    String sApellidos;
+    String sDireccion;
+    String sDni;
+    int iTelefono;
+    int iEdad;
+    ArrayList&lt;Cuenta&gt; acCuentas;
+    
+    /**
+     * Metodo para retirar dinero de una cuenta del cliente.
+     * @param c recibe una cuenta del cliente por parametro
+     * @param t recibe una tarjeta del cliente por parametro
+     * @param d recibe la cantidad de dinero que se desea retirar de la cuenta
+     * @Return int Devuelve el saldo restante en la cuenta, si no se puede realizar devuelve 0
+     * @see RetirarFondos de la Clase Cuenta
+     */
+    public int SacarDinero(Cuenta c,Tarjeta t,int d){
+    
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">    if(c.RetirarFondos(d,t)){</span>
+    
+<span class="fc" id="L33">        return c.getiSaldo();</span>
+        
+    }
+    else{
+<span class="nc" id="L37">        return 0;</span>
+    }
+}
+
+    /**
+     * Constructor de la clase para crear nuevos objetos
+     * @param sNombre
+     * @param sApellidos
+     * @param sDireccion
+     * @param sDni
+     * @param iTelefono
+     * @param iEdad
+     */
+<span class="fc" id="L50">    public Cliente(String sNombre, String sApellidos, String sDireccion, String sDni, int iTelefono, int iEdad) {</span>
+<span class="fc" id="L51">        this.sNombre = sNombre;</span>
+<span class="fc" id="L52">        this.sApellidos = sApellidos;</span>
+<span class="fc" id="L53">        this.sDireccion = sDireccion;</span>
+<span class="fc" id="L54">        this.sDni = sDni;</span>
+<span class="fc" id="L55">        this.iTelefono = iTelefono;</span>
+<span class="fc" id="L56">        this.iEdad = iEdad;</span>
+<span class="fc" id="L57">    }</span>
+    
+    /**
+     * Metodo para ingresar dinero en una cuenta del cliente
+     * @param c recibe una cuenta del cliente por parametro
+     * @param d recibe la cantidad que se desea ingresar
+     * @see IngresarFondos de la Clase Cuenta
+     */
+    public int IngresarDinero(Cuenta c, int d){
+
+<span class="fc" id="L67">    c.IngresarFondos(d);</span>
+<span class="fc" id="L68">    return c.getiSaldo();</span>
+
+}
+    
+    /**
+     *Metodo para añadir una cuenta al Cliente
+     * @param c recibe la cuenta que queremos añadir por parametro
+     */
+    public boolean AñadirCuenta(Cuenta c){
+    
+<span class="nc" id="L78">        this.acCuentas.add(c);</span>
+<span class="nc" id="L79">        return true; </span>
+    };
+    
+    /**
+     *
+     * @param sNombre
+     */
+    public void setsNombre(String sNombre) {
+<span class="nc" id="L87">        this.sNombre = sNombre;</span>
+<span class="nc" id="L88">    }</span>
+
+    /**
+     *
+     * @param sApellidos
+     */
+    public void setsApellidos(String sApellidos) {
+<span class="nc" id="L95">        this.sApellidos = sApellidos;</span>
+<span class="nc" id="L96">    }</span>
+
+    /**
+     *
+     * @param sDireccion
+     */
+    public void setsDireccion(String sDireccion) {
+<span class="nc" id="L103">        this.sDireccion = sDireccion;</span>
+<span class="nc" id="L104">    }</span>
+
+    /**
+     *
+     * @param sDni
+     */
+    public void setsDni(String sDni) {
+<span class="nc" id="L111">        this.sDni = sDni;</span>
+<span class="nc" id="L112">    }</span>
+
+    /**
+     *
+     * @param iTelefono
+     */
+    public void setiTelefono(int iTelefono) {
+<span class="nc" id="L119">        this.iTelefono = iTelefono;</span>
+<span class="nc" id="L120">    }</span>
+
+    /**
+     *
+     * @param iEdad
+     */
+    public void setiEdad(int iEdad) {
+<span class="nc" id="L127">        this.iEdad = iEdad;</span>
+<span class="nc" id="L128">    }</span>
+
+    /**
+     *
+     * @param acCuentas
+     */
+    public void setAcCuentas(ArrayList&lt;Cuenta&gt; acCuentas) {
+<span class="nc" id="L135">        this.acCuentas = acCuentas;</span>
+<span class="nc" id="L136">    }</span>
+
+    /**
+     *
+     * @return
+     */
+    public String getsNombre() {
+<span class="nc" id="L143">        return sNombre;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getsApellidos() {
+<span class="nc" id="L151">        return sApellidos;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getsDireccion() {
+<span class="nc" id="L159">        return sDireccion;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getsDni() {
+<span class="nc" id="L167">        return sDni;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getiTelefono() {
+<span class="nc" id="L175">        return iTelefono;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getiEdad() {
+<span class="nc" id="L183">        return iEdad;</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList&lt;Cuenta&gt; getAcCuentas() {
+<span class="nc" id="L191">        return acCuentas;</span>
+    }
+    
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
