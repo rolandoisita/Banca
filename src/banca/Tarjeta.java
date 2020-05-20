@@ -13,6 +13,15 @@ public class Tarjeta {
  
     int iLimiteRetidara;
     int iLimitePagoOnline;
+    int iPagosRealizados;
+
+    public void setiPagosRealizados(int iPagosRealizados) {
+        this.iPagosRealizados = iPagosRealizados;
+    }
+
+    public int getiPagosRealizados() {
+        return iPagosRealizados;
+    }
 
     public void setiLimiteRetidara(int iLimiteRetidara) {
         this.iLimiteRetidara = iLimiteRetidara;
