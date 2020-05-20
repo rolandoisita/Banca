@@ -15,7 +15,7 @@ public class Cuenta {
     String sNumero_cuenta;
     int []iSaldo_mensual=new int[12];
     ArrayList<Tarjeta> atTarjetas;
-    int iPagos_realiazdos;
+    
     String Fecha_apertura;
     
     public void ComporbarSaldo(){}
@@ -47,12 +47,18 @@ public class Cuenta {
     return suma/12;
     }
     
+    public void AñadirTarjeta(Tarjeta t){
+    
+        atTarjetas.add(t);
+    
+    }
+            
     public Cuenta(int iSaldo,String sNumero_cuenta, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
         
         this.Fecha_apertura = Fecha_apertura;
-        this.iPagos_realiazdos=Math.round((int)(Math.random()*100));
+        
         for(int i=0;i<this.iSaldo_mensual.length;i++){
         
             this.iSaldo_mensual[i]=Math.round((int)(Math.random()*1000));
@@ -68,9 +74,7 @@ public class Cuenta {
         return sNumero_cuenta;
     }
 
-    public int getiPagos_realiazdos() {
-        return iPagos_realiazdos;
-    }
+    
 
     public String getFecha_apertura() {
         return Fecha_apertura;
@@ -84,9 +88,7 @@ public class Cuenta {
         this.sNumero_cuenta = sNumero_cuenta;
     }
 
-    public void setiPagos_realiazdos(int iPagos_realiazdos) {
-        this.iPagos_realiazdos = iPagos_realiazdos;
-    }
+    
 
     public void setFecha_apertura(String Fecha_apertura) {
         this.Fecha_apertura = Fecha_apertura;

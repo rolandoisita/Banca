@@ -15,6 +15,13 @@ public class Tarjeta {
     int iLimitePagoOnline;
     int iPagosRealizados;
 
+    public Tarjeta(int iLimiteRetidara, int iLimitePagoOnline) {
+        this.iLimiteRetidara = iLimiteRetidara;
+        this.iLimitePagoOnline = iLimitePagoOnline;
+        this.iPagosRealizados=Math.round((int)Math.random()*100);
+    }
+
+    
     public void setiPagosRealizados(int iPagosRealizados) {
         this.iPagosRealizados = iPagosRealizados;
     }
