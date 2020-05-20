@@ -23,17 +23,18 @@ public class Cliente {
      * @param c recibe una cuenta del cliente por parametro
      * @param t recibe una tarjeta del cliente por parametro
      * @param d recibe la cantidad de dinero que se desea retirar de la cuenta
+     * @Return int Devuelve el saldo restante en la cuenta, si no se puede realizar devuelve 0
      * @see RetirarFondos de la Clase Cuenta
      */
-    public void SacarDinero(Cuenta c,Tarjeta t,int d){
+    public int SacarDinero(Cuenta c,Tarjeta t,int d){
     
     if(c.RetirarFondos(d,t)){
     
-        System.out.println("Has retirado: "+d+" € de tu cuenta./n"+"Le quedan: "+c.getiSaldo()+" € en su cuenta.");
+        return c.getiSaldo();
         
     }
     else{
-        System.out.println("No se han podido retirar lso fondos por falta de saldo o limite de retirada./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
+        return 0;
     }
 }
 
@@ -61,10 +62,10 @@ public class Cliente {
      * @param d recibe la cantidad que se desea ingresar
      * @see IngresarFondos de la Clase Cuenta
      */
-    public void IngresarDinero(Cuenta c, int d){
+    public int IngresarDinero(Cuenta c, int d){
 
     c.IngresarFondos(d);
-    System.out.println("Se han ingresado "+d+" € a su cuenta.");
+    return c.getiSaldo();
 
 }
     
@@ -72,10 +73,10 @@ public class Cliente {
      *Metodo para añadir una cuenta al Cliente
      * @param c recibe la cuenta que queremos añadir por parametro
      */
-    public void AñadirCuenta(Cuenta c){
+    public boolean AñadirCuenta(Cuenta c){
     
         this.acCuentas.add(c);
-        
+        return true; 
     };
     
     /**
