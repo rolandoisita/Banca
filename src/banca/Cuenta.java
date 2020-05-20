@@ -19,10 +19,11 @@ public class Cuenta {
     String Fecha_apertura;
     
     /**
-     *
-     * @param d
-     * @param t
-     * @return
+     * Metodo para retirar fondos de la cuenta
+     * @param d recibe por parametro la cantidad que deseas retirar de la cuenta
+     * @param t recibe una tarjeta asociada  la cuenta con la que se van a retirar los fondos
+     * @return boolean devuelve true si se ha podido retirar los fondos y false y no se ha podido
+     * @see SacarDinero de Cliente
      */
     public boolean RetirarFondos(int d, Tarjeta t){
     int resta;
@@ -37,9 +38,10 @@ public class Cuenta {
     }
     
     /**
-     *
-     * @param d
-     * @return
+     * Metodo para ingresar dinero en la cuenta
+     * @param d recibe la cantidad que se quiere ingresar
+     * @return boolean devuelve true si se han añadido los fondos
+     * @see IngresarDinero de Cliente
      */
     public boolean IngresarFondos(int d){
     
@@ -49,8 +51,8 @@ public class Cuenta {
     }
     
     /**
-     *
-     * @return
+     * Metodo para saber el saldo medio de la cuenta 
+     * @return int devuelve el saldo medio 
      */
     public int SaldoMedio(){
     int suma=0;
@@ -61,8 +63,8 @@ public class Cuenta {
     }
     
     /**
-     *
-     * @param t
+     * Metodo para añadir una tarjeta  a la cuenta
+     * @param t recibe la tarjeta por parametro
      */
     public void AñadirTarjeta(Tarjeta t){
     
@@ -71,7 +73,7 @@ public class Cuenta {
     }
             
     /**
-     *
+     * Constructor de la clase Cuenta
      * @param iSaldo
      * @param sNumero_cuenta
      * @param Fecha_apertura
