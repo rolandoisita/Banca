@@ -24,7 +24,7 @@ public class ClienteTest {
     
     /**
      * Test of SacarDinero method, of class Cliente.
-     * Probamos si el metodo funciona como deberia y si funcionan las restricciones de saldo
+     * comporbamos que el saldo de la cuenta baja despues de sacar dinero
      */
     @Test
     public void testSacarDinero() {
@@ -42,6 +42,7 @@ public class ClienteTest {
 
     /**
      * Test of IngresarDinero method, of class Cliente.
+     * Probamos que el saldo de la cuenta aumenta despues del ingreso
      */
     @Test
     public void testIngresarDinero() {
@@ -55,6 +56,7 @@ public class ClienteTest {
 
     /**
      * Test of AñadirCuenta method, of class Cliente.
+     * Probamos que la cuenta se añade correctamente
      */
     @Test
     public void testAñadirCuenta() {
