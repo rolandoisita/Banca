@@ -6,7 +6,7 @@
 package banca;
 import java.util.ArrayList;
 /**
- *
+ * Clase cuenta para guardar los datos de las cuentas de los clientes y hacer algunas operaciones   
  * @author roly
  */
 public class Cuenta {
@@ -18,8 +18,12 @@ public class Cuenta {
     
     String Fecha_apertura;
     
-    public void ComporbarSaldo(){}
-    
+    /**
+     *
+     * @param d
+     * @param t
+     * @return
+     */
     public boolean RetirarFondos(int d, Tarjeta t){
     int resta;
     resta=this.iSaldo-d;
@@ -32,6 +36,11 @@ public class Cuenta {
         }
     }
     
+    /**
+     *
+     * @param d
+     * @return
+     */
     public boolean IngresarFondos(int d){
     
         this.iSaldo+=d;
@@ -39,6 +48,10 @@ public class Cuenta {
     
     }
     
+    /**
+     *
+     * @return
+     */
     public int SaldoMedio(){
     int suma=0;
         for(int i=0;i<this.iSaldo_mensual.length;i++){
@@ -47,12 +60,22 @@ public class Cuenta {
     return suma/12;
     }
     
+    /**
+     *
+     * @param t
+     */
     public void AñadirTarjeta(Tarjeta t){
     
         atTarjetas.add(t);
     
     }
             
+    /**
+     *
+     * @param iSaldo
+     * @param sNumero_cuenta
+     * @param Fecha_apertura
+     */
     public Cuenta(int iSaldo,String sNumero_cuenta, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
@@ -66,30 +89,50 @@ public class Cuenta {
         }
     }
     
+    /**
+     *
+     * @return
+     */
     public int getiSaldo() {
         return iSaldo;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getsNumero_cuenta() {
         return sNumero_cuenta;
     }
 
-    
-
+    /**
+     *
+     * @return
+     */
     public String getFecha_apertura() {
         return Fecha_apertura;
     }
 
+    /**
+     *
+     * @param iSaldo
+     */
     public void setiSaldo(int iSaldo) {
         this.iSaldo = iSaldo;
     }
 
+    /**
+     *
+     * @param sNumero_cuenta
+     */
     public void setsNumero_cuenta(String sNumero_cuenta) {
         this.sNumero_cuenta = sNumero_cuenta;
     }
 
-    
-
+    /**
+     *
+     * @param Fecha_apertura
+     */
     public void setFecha_apertura(String Fecha_apertura) {
         this.Fecha_apertura = Fecha_apertura;
     }

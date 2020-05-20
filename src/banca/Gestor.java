@@ -11,12 +11,31 @@ import java.util.Scanner;
  */
 public class Gestor {
     
+    /**
+     *
+     * @param n
+     * @param a
+     * @param d
+     * @param id
+     * @param t
+     * @param e
+     */
     public void CrearCliente(String n,String a,String d,String id,int t,int e){
     
         Cliente c = new Cliente(n,a,d,id,t,e);
     
     }
     
+    /**
+     *
+     * @param c
+     * @param s
+     * @param ta
+     * @param lr
+     * @param lo
+     * @param nc
+     * @param f
+     */
     public void CrearCuenta(Cliente c,int s, int ta, int lr,int lo,String nc,String f){
         
         
@@ -25,6 +44,10 @@ public class Gestor {
     
     }
     
+    /**
+     *
+     * @param c
+     */
     public void ModificarCliente(Cliente c){
          Scanner teclado= new Scanner(System.in);
          int cambio=1;
