@@ -29,6 +29,15 @@ public class Cliente {
         System.out.println("No se han podido retirar lso fondos por falta de saldo o limite de retirada./n"+"Tiene: "+c.getiSaldo()+" € en su cuenta.");
     }
 }
+
+    public Cliente(String sNombre, String sApellidos, String sDireccion, String sDni, int iTelefono, int iEdad) {
+        this.sNombre = sNombre;
+        this.sApellidos = sApellidos;
+        this.sDireccion = sDireccion;
+        this.sDni = sDni;
+        this.iTelefono = iTelefono;
+        this.iEdad = iEdad;
+    }
     
     public void IngresarDinero(Cuenta c, int d){
 

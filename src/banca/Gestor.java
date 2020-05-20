@@ -11,6 +11,11 @@ import java.util.Scanner;
  */
 public class Gestor {
     
+    public void CrearCliente(String n,String a,String d,String id,int t,int e){
+    
+        Cliente c = new Cliente(n,a,d,id,t,e);
+    
+    }
     
     public void CrearCuenta(Cliente c,int s,String nc, int ta, int lr,int lo,String f){
         
@@ -54,6 +59,7 @@ public class Gestor {
                 }
         
         }
+    
     
     }
 
