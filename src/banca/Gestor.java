@@ -20,10 +20,10 @@ public class Gestor {
      * @param t recibe el telefono
      * @param e recibe la edad
      */
-    public void CrearCliente(String n,String a,String d,String id,int t,int e){
+    public boolean CrearCliente(String n,String a,String d,String id,int t,int e){
     
         Cliente c = new Cliente(n,a,d,id,t,e);
-    
+        return true;
     }
     
     /**
@@ -33,12 +33,12 @@ public class Gestor {
      * @param nc recibe el numero de cuenta que va llevar
      * @param f recibe la fecha de creacion de la cuenta
      */
-    public void CrearCuenta(Cliente c,int s,String nc,String f){
+    public boolean CrearCuenta(Cliente c,int s,String nc,String f){
         
         
         Cuenta a = new Cuenta(s,nc,f);
         c.AñadirCuenta(a);
-    
+        return true;
     }
     
     /**

@@ -63,7 +63,7 @@ public class CuentaTest {
         Tarjeta t1 = new Tarjeta(300,300);
         
         assertTrue(c1.AñadirTarjeta(t1)==true);
-         assertFalse(c1.AñadirTarjeta(t1)!=true);
+        assertFalse(c1.AñadirTarjeta(t1)!=true);
     }
 
     
