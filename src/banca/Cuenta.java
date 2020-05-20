@@ -16,7 +16,7 @@ public class Cuenta {
     int iTarjeta_asociada;
     int iLimite_retirada;
     int iLimite_online;
-    int iSaldo_medio;
+    int []iSaldo_mensual=new int[12];
     int iPagos_realiazdos;
     String Fecha_apertura;
     
@@ -41,14 +41,12 @@ public class Cuenta {
     
     }
     
-    public Cuenta(int iSaldo, String sNumero_cuenta, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, int iSaldo_medio, int iPagos_realiazdos, String Fecha_apertura) {
+    public Cuenta(int iSaldo, String sNumero_cuenta, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
         this.iTarjeta_asociada = iTarjeta_asociada;
         this.iLimite_retirada = iLimite_retirada;
         this.iLimite_online = iLimite_online;
-        this.iSaldo_medio = iSaldo_medio;
-        this.iPagos_realiazdos = iPagos_realiazdos;
         this.Fecha_apertura = Fecha_apertura;
     }
     
@@ -72,9 +70,7 @@ public class Cuenta {
         return iLimite_online;
     }
 
-    public int getiSaldo_medio() {
-        return iSaldo_medio;
-    }
+   
 
     public int getiPagos_realiazdos() {
         return iPagos_realiazdos;
@@ -102,10 +98,6 @@ public class Cuenta {
 
     public void setiLimite_online(int iLimite_online) {
         this.iLimite_online = iLimite_online;
-    }
-
-    public void setiSaldo_medio(int iSaldo_medio) {
-        this.iSaldo_medio = iSaldo_medio;
     }
 
     public void setiPagos_realiazdos(int iPagos_realiazdos) {

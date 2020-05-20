@@ -15,7 +15,7 @@ public class Gestor {
     public void CrearCuenta(Cliente c,int s,String nc, int ta, int lr,int lo,String f){
         
         
-        Cuenta a = new Cuenta(s,nc,ta,lr,lo,0,0,f);
+        Cuenta a = new Cuenta(s,nc,ta,lr,lo,f);
         c.AñadirCuenta(a);
     
     }
