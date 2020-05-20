@@ -19,6 +19,7 @@ public class Gestor {
      * @param id recibe el dni
      * @param t recibe el telefono
      * @param e recibe la edad
+     * @return boolean
      */
     public boolean CrearCliente(String n,String a,String d,String id,int t,int e){
     
@@ -32,6 +33,7 @@ public class Gestor {
      * @param s recibe el saldo que va atener la cuenta
      * @param nc recibe el numero de cuenta que va llevar
      * @param f recibe la fecha de creacion de la cuenta
+     * @return boolean
      */
     public boolean CrearCuenta(Cliente c,int s,String nc,String f){
         

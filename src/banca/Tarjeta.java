@@ -17,8 +17,8 @@ public class Tarjeta {
 
     /**
      * Constructor de la tarjeta
-     * @param iLimiteRetidara
-     * @param iLimitePagoOnline
+     * @param iLimiteRetidara limiteretirada
+     * @param iLimitePagoOnline limiteonline
      */
     public Tarjeta(int iLimiteRetidara, int iLimitePagoOnline) {
         this.iLimiteRetidara = iLimiteRetidara;
@@ -26,50 +26,32 @@ public class Tarjeta {
         this.iPagosRealizados=Math.round((int)Math.random()*100);
     }
 
-    /**
-     *
-     * @param iPagosRealizados
-     */
+    
     public void setiPagosRealizados(int iPagosRealizados) {
         this.iPagosRealizados = iPagosRealizados;
     }
 
-    /**
-     *
-     * @return
-     */
+    
     public int getiPagosRealizados() {
         return iPagosRealizados;
     }
 
-    /**
-     *
-     * @param iLimiteRetidara
-     */
+   
     public void setiLimiteRetidara(int iLimiteRetidara) {
         this.iLimiteRetidara = iLimiteRetidara;
     }
 
-    /**
-     *
-     * @param iLimitePagoOnline
-     */
+    
     public void setiLimitePagoOnline(int iLimitePagoOnline) {
         this.iLimitePagoOnline = iLimitePagoOnline;
     }
 
-    /**
-     *
-     * @return
-     */
+    
     public int getiLimiteRetidara() {
         return iLimiteRetidara;
     }
 
-    /**
-     *
-     * @return
-     */
+    
     public int getiLimitePagoOnline() {
         return iLimitePagoOnline;
     }

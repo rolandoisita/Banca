@@ -22,7 +22,6 @@ public class Cuenta {
      * @param d recibe por parametro la cantidad que deseas retirar de la cuenta
      * @param t recibe una tarjeta asociada  la cuenta con la que se van a retirar los fondos
      * @return boolean devuelve true si se ha podido retirar los fondos y false y no se ha podido
-     * @see SacarDinero de Cliente
      */
     public boolean RetirarFondos(int d, Tarjeta t){
     int resta;
@@ -40,7 +39,6 @@ public class Cuenta {
      * Metodo para ingresar dinero en la cuenta
      * @param d recibe la cantidad que se quiere ingresar
      * @return boolean devuelve true si se han añadido los fondos
-     * @see IngresarDinero de Cliente
      */
     public boolean IngresarFondos(int d){
     
@@ -64,6 +62,7 @@ public class Cuenta {
     /**
      * Metodo para añadir una tarjeta  a la cuenta
      * @param t recibe la tarjeta por parametro
+     *  @return boolean
      */
     public boolean AñadirTarjeta(Tarjeta t){
     
@@ -73,9 +72,9 @@ public class Cuenta {
             
     /**
      * Constructor de la clase Cuenta
-     * @param iSaldo
-     * @param sNumero_cuenta
-     * @param Fecha_apertura
+     * @param iSaldo saldo
+     * @param sNumero_cuenta numero cuenta
+     * @param Fecha_apertura fecha
      */
     public Cuenta(int iSaldo,String sNumero_cuenta, String Fecha_apertura) {
         this.iSaldo = iSaldo;
@@ -90,50 +89,31 @@ public class Cuenta {
         }
     }
     
-    /**
-     *
-     * @return
-     */
+    
     public int getiSaldo() {
         return iSaldo;
     }
 
-    /**
-     *
-     * @return
-     */
+   
     public String getsNumero_cuenta() {
         return sNumero_cuenta;
     }
 
-    /**
-     *
-     * @return
-     */
+   
     public String getFecha_apertura() {
         return Fecha_apertura;
     }
 
-    /**
-     *
-     * @param iSaldo
-     */
+    
     public void setiSaldo(int iSaldo) {
         this.iSaldo = iSaldo;
     }
 
-    /**
-     *
-     * @param sNumero_cuenta
-     */
+   
     public void setsNumero_cuenta(String sNumero_cuenta) {
         this.sNumero_cuenta = sNumero_cuenta;
     }
 
-    /**
-     *
-     * @param Fecha_apertura
-     */
     public void setFecha_apertura(String Fecha_apertura) {
         this.Fecha_apertura = Fecha_apertura;
     }

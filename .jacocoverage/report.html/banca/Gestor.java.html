@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Clase Gestor para realiazr operaciones sobre las cuentas y perfiles de los clientes
  * @author roly
  */
-<span class="nc" id="L12">public class Gestor {</span>
+<span class="fc" id="L12">public class Gestor {</span>
     
     /**
      * Metodo para crear un cliente
@@ -20,11 +20,11 @@ import java.util.Scanner;
      * @param t recibe el telefono
      * @param e recibe la edad
      */
-    public void CrearCliente(String n,String a,String d,String id,int t,int e){
+    public boolean CrearCliente(String n,String a,String d,String id,int t,int e){
     
-<span class="nc" id="L25">        Cliente c = new Cliente(n,a,d,id,t,e);</span>
-    
-<span class="nc" id="L27">    }</span>
+<span class="fc" id="L25">        Cliente c = new Cliente(n,a,d,id,t,e);</span>
+<span class="fc" id="L26">        return true;</span>
+    }
     
     /**
      * Metodo para crear una cuenta
@@ -33,13 +33,13 @@ import java.util.Scanner;
      * @param nc recibe el numero de cuenta que va llevar
      * @param f recibe la fecha de creacion de la cuenta
      */
-    public void CrearCuenta(Cliente c,int s,String nc,String f){
+    public boolean CrearCuenta(Cliente c,int s,String nc,String f){
         
         
-<span class="nc" id="L39">        Cuenta a = new Cuenta(s,nc,f);</span>
+<span class="fc" id="L39">        Cuenta a = new Cuenta(s,nc,f);</span>
 <span class="nc" id="L40">        c.AñadirCuenta(a);</span>
-    
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L41">        return true;</span>
+    }
     
     /**
      * Metodo para modificar el perfil de un cliente
