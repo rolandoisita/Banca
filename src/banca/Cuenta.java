@@ -41,6 +41,14 @@ public class Cuenta {
     
     }
     
+    public int SaldoMedio(){
+    int suma=0;
+        for(int i=0;i<this.iSaldo_mensual.length;i++){
+            suma+=this.iSaldo_mensual[i];
+        }
+    return suma/12;
+    }
+    
     public Cuenta(int iSaldo, String sNumero_cuenta, int iTarjeta_asociada, int iLimite_retirada, int iLimite_online, String Fecha_apertura) {
         this.iSaldo = iSaldo;
         this.sNumero_cuenta = sNumero_cuenta;
@@ -48,6 +56,12 @@ public class Cuenta {
         this.iLimite_retirada = iLimite_retirada;
         this.iLimite_online = iLimite_online;
         this.Fecha_apertura = Fecha_apertura;
+        this.iPagos_realiazdos=Math.round((int)(Math.random()*100));
+        for(int i=0;i<this.iSaldo_mensual.length;i++){
+        
+            this.iSaldo_mensual[i]=Math.round((int)(Math.random()*1000));
+            
+        }
     }
     
     public int getiSaldo() {
