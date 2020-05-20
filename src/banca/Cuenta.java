@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package banca;
-
+import java.util.ArrayList;
 /**
  *
  * @author roly
@@ -14,18 +14,18 @@ public class Cuenta {
     int iSaldo;
     String sNumero_cuenta;
     int iTarjeta_asociada;
-    int iLimite_retirada;
-    int iLimite_online;
+    
     int []iSaldo_mensual=new int[12];
+    ArrayList<Tarjeta> atTarjetas;
     int iPagos_realiazdos;
     String Fecha_apertura;
     
     public void ComporbarSaldo(){}
     
-    public boolean RetirarFondos(int d){
+    public boolean RetirarFondos(int d, Tarjeta t){
     int resta;
     resta=this.iSaldo-d;
-        if(resta<0 && d>this.iLimite_retirada){
+        if(resta<0 && d>t.getiLimiteRetidara()){
             return false;
         }
         else{
