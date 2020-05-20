@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class Gestor {
     
     /**
-     *
-     * @param n
-     * @param a
-     * @param d
-     * @param id
-     * @param t
-     * @param e
+     * Metodo para crear un cliente
+     * @param n recibe el nombre
+     * @param a recibe los apellidos
+     * @param d la direccion
+     * @param id recibe el dni
+     * @param t recibe el telefono
+     * @param e recibe la edad
      */
     public void CrearCliente(String n,String a,String d,String id,int t,int e){
     
@@ -27,16 +27,13 @@ public class Gestor {
     }
     
     /**
-     *
-     * @param c
-     * @param s
-     * @param ta
-     * @param lr
-     * @param lo
-     * @param nc
-     * @param f
+     * Metodo para crear una cuenta
+     * @param c recibe el cliente al que se le crea la cuenta
+     * @param s recibe el saldo que va atener la cuenta
+     * @param nc recibe el numero de cuenta que va llevar
+     * @param f recibe la fecha de creacion de la cuenta
      */
-    public void CrearCuenta(Cliente c,int s, int ta, int lr,int lo,String nc,String f){
+    public void CrearCuenta(Cliente c,int s,String nc,String f){
         
         
         Cuenta a = new Cuenta(s,nc,f);
@@ -45,8 +42,8 @@ public class Gestor {
     }
     
     /**
-     *
-     * @param c
+     * Metodo para modificar el perfil de un cliente
+     * @param c recibe el cliente que se quiere modificar
      */
     public void ModificarCliente(Cliente c){
          Scanner teclado= new Scanner(System.in);

@@ -15,7 +15,6 @@ public class Cuenta {
     String sNumero_cuenta;
     int []iSaldo_mensual=new int[12];
     ArrayList<Tarjeta> atTarjetas;
-    
     String Fecha_apertura;
     
     /**
